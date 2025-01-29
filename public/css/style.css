@@ -1,60 +1,30 @@
 /* style.css */
 
-/* General Body Settings */
+/* Global overrides or brand colors */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; /* Light background */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-  
-  /* Navbar Overrides */
-  .navbar {
-    background-color: #343a40; /* Dark gray bootstrap color */
-  }
-  
-  .navbar .navbar-brand,
-  .navbar .nav-link {
-    color: #ffffff !important;
-  }
-  
-  .navbar .nav-link:hover {
-    background-color: #495057; 
-    color: #ffffff !important;
-  }
-  
-  /* Main Content Container */
-  .main-content {
-    margin: 2rem auto;
-    max-width: 800px;
-    padding: 0 1rem;
-  }
-  
-  /* Post Styling */
-  .post {
-    background-color: #ffffff;
-    border-radius: 6px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .post h2 {
-    color: #343a40;
-    margin-bottom: 0.5rem;
-  }
-  
-  .post p {
-    margin-bottom: 1rem;
-  }
-  
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #6c757d; /* Bootstrap gray */
-    background-color: #ffffff;
-    border-top: 1px solid #dee2e6;
-  }
-  
+  background-color: #f9fafb;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.card {
+  border: none; /* remove border for a cleaner look */
+  border-radius: 8px; /* slightly rounded corners */
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.card-footer {
+  border-radius: 0 0 8px 8px;
+  background-color: #f1f1f1;
+}
+
+.footer {
+  border-top: 1px solid #ddd;
+}

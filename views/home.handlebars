@@ -1,22 +1,22 @@
-{{#if logged_in}}
-  <a href="/dashboard" class="btn btn-primary">My Dashboard</a>
-  <form action="/api/users/logout" method="POST">
-    <button type="submit" class="btn btn-warning">Logout</button>
-  </form>
-{{else}}
-  <a href="/login" class="btn btn-primary">Login</a>
-  <a href="/signup" class="btn btn-secondary">Sign Up</a>
-{{/if}}
+<!-- views/home.handlebars -->
+{{!-- Pass "title" from your route if you want a page title --}}
+{{!-- e.g. res.render('home', { title: 'Home', posts }) --}}
+<h1 class="text-center mb-4">Latest Posts</h1>
 
-<h1 class="text-center my-5">DevForge Posts</h1>
-
-<div class="container">
+<div class="row">
   {{#each posts}}
-    <div class="post">
-      <h2>{{this.title}}</h2>
-      <p>{{this.body}}</p>
-      <small>by {{this.user.username}}</small>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{this.title}}</h5>
+          <p class="card-text">
+            {{this.body}}
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          by {{this.user.username}}
+        </div>
+      </div>
     </div>
-    <hr/>
   {{/each}}
 </div>

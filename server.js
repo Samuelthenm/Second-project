@@ -13,6 +13,12 @@ const PORT = process.env.PORT || 3001;
 
 // Handlebars setup
 const hbs = exphbs.create({ /* helpers if needed */ });
+const errorHandler = require('./middleware/errorHandler');
+
+// ... your other middleware, routes, etc.
+
+// Global error handling (comes last, after routes)
+app.use(errorHandler);
 
 // Session setup
 const sess = {

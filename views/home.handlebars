@@ -1,0 +1,22 @@
+{{#if logged_in}}
+  <a href="/dashboard" class="btn btn-primary">My Dashboard</a>
+  <form action="/api/users/logout" method="POST">
+    <button type="submit" class="btn btn-warning">Logout</button>
+  </form>
+{{else}}
+  <a href="/login" class="btn btn-primary">Login</a>
+  <a href="/signup" class="btn btn-secondary">Sign Up</a>
+{{/if}}
+
+<h1 class="text-center my-5">DevForge Posts</h1>
+
+<div class="container">
+  {{#each posts}}
+    <div class="post">
+      <h2>{{this.title}}</h2>
+      <p>{{this.body}}</p>
+      <small>by {{this.user.username}}</small>
+    </div>
+    <hr/>
+  {{/each}}
+</div>
